@@ -13,7 +13,8 @@ int linear(const std::vector<int>& array, int key) {
 
 int main() {
   int size = 5;
-  std::vector<int> nums(size, 0);
+  std::vector<int> nums;
+  nums.reserve(size);
   std::cout << "Enter "<<size<<" numbers:\n";
 
   for (int i = 0; i < size; i++) {
@@ -24,7 +25,7 @@ int main() {
   
   int key;
   
-  std::cout << "Type which number you are looking for in the array:\n";
+  std::cout << "Type which number you arelooking for in the array:\n";
   std::cin >> key;
   
   int index = linear(nums, key);
