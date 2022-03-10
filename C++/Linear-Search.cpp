@@ -3,12 +3,12 @@
 
 //linear search
 int linear(const std::vector<int>& array, int key) {
-  for (int i = 0; i<array.length(); i++) {
+  for (int i = 0; i<array.size(); i++) {
     if (array[i] == key) {
       return i;
     }
   }
-  return NULL;
+  return -1;
 }
 
 int main() {
@@ -24,15 +24,15 @@ int main() {
   
   int key;
   
-  std::cout << "Type which number you arelooking for in the array:\n";
+  std::cout << "Type which number you are looking for in the array:\n";
   std::cin >> key;
   
   int index = linear(nums, key);
-  if (index == NULL) {
-    std::cout << "Couldn't find the number you were looking for.\n";
+  if (index >= 0) {
+  	std::cout << "The number you are looking for is at index "<<index<<" of the array\n";
   }
   else {
-    std::cout << "The number you are looking for is at index "<<index<<" of the array\n";
+    std::cout << "Couldn't find the number you were looking for.\n";
   }
   
   return 0;
