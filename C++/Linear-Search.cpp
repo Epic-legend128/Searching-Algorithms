@@ -2,7 +2,7 @@
 #include <vector>
 
 //linear search
-int linear(const std::vector<int>& array, key) {
+int linear(const std::vector<int>& array, int key) {
   for (int i = 0; i<array.length(); i++) {
     if (array[i] == key) {
       return i;
@@ -21,6 +21,8 @@ int main() {
     std::cin >> current;
     nums.push_back(current);
   }
+  
+  int key;
   
   std::cout << "Type which number you arelooking for in the array:\n";
   std::cin >> key;
